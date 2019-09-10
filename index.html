@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Training jQuery</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Project jQuery - Quản Lí Bài Viết</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg-3">
+        <input type="text" class="form-control" placeholder="Tìm tên bài viết..." id="search-name" />
+      </div>
+      <div class="col-lg-3">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Sắp xếp theo <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" id="sort-item">
+            <li><a role="button" data-value="name-asc">Tên A - Z</a></li>
+            <li><a role="button" data-value="name-desc">Tên Z - A</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a role="button" data-value="cate-asc">Chuyên mục A - Z</a></li>
+            <li><a role="button" data-value="cate-desc">Chuyên mục Z - A</a></li>
+          </ul>
+          <span class="label label-success label-medium" id="sort-item-value">Tên A - Z</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <button type="button" class="btn btn-info btn-block marginB10" id="toggle-form-button">Thêm bài viết</button>
+      </div>
+    </div>
+    <div class="row marginB10">
+        <div class="col-lg-offset-6 col-lg-6">
+            <form class="form-inline" id="toggle-form-content" style="display: none;">
+                <div class="form-group name">
+                    <input type="text" class="form-control" placeholder="Tên bài viết" id="ipn-add-item" />
+                </div>
+                <div class="form-group category">
+                    <select class="form-control" id="select-add-item">
+                        <!-- render bằng jquery -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-default" id="btn-add-cancel">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="btn-add-submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="panel panel-success">
+        <div class="panel-heading">Danh sách bài viết</div>
+        <table class="table table-hover ">
+            <thead>
+                <tr>
+                    <th style="width: 10%" class="text-center">#</th>
+                    <th>Tên bài viết</th>
+                    <th style="width: 15%">Chuyên mục</th>
+                    <th style="width: 15%"></th>
+                </tr>
+            </thead>
+            <tbody id="data-body">
+                <!-- render bằng jquery -->
+            </tbody>
+        </table>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/uuid_v4@latest.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main-function.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
